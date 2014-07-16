@@ -1,7 +1,12 @@
 window.addEventListener('load',function(e) {
 
 
-  var Q = window.Q = Quintus().include("Sprites, UI, Scenes, Input, Touch");
+  var Q = window.Q = Quintus({
+    imagePath: "file:///C:/Rumbling%20Spell%20Orchestra/"
+  })
+
+
+  .include("Sprites, UI, Scenes, Input, Touch");
 
   Q.setup({width: 960, height: 900 })
     .controls()
@@ -9,7 +14,7 @@ window.addEventListener('load',function(e) {
 
   Q.Sprite.extend("BG",{
     init: function(p) {
-      this._super(p, { asset: "Hinafuda_-_Card_Back_small.jpg", type: 0 });
+      this._super(p, { asset: "Alice/Alice0600.jpg", type: 0 });
     }
   });
 
@@ -18,9 +23,10 @@ window.addEventListener('load',function(e) {
   Q.scene("startGame",function(stage) {  
     /* Implement Objects */
     var bg1 = stage.insert(new Q.BG({ name: "bg", x: 250, y: 300, z: 3,}));
+    console.log("lol");
   });
 
-  Q.load("Hinafuda_-_Card_Back_small.jpg", function() {
+  Q.load("Alice/Alice0600.jpg", function() {
     Q.stageScene("startGame");
   });
 
