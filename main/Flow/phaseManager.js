@@ -1,13 +1,10 @@
 ;Quintus.Flow_PhaseManager = function(Q) {
 
   Q.scene("startGame",function(stage) {  
-    /* Implement Objects */
 
-    var turn = 0;
+    Q.state.reset({phase: " Replenishing Phase ", turn: 0})
 
     //var bg = stage.insert(new Q.Character({ path: "Alice/Alice0600.jpg", id:"0600", x: 250, y: 300, z: 3,}));
-
-
 
     /* Init Layout */
     Q.OwnActiveCard   = stage.insert(new Q.ownActiveCard());
@@ -34,7 +31,6 @@
     Q.OwnReserveCard  = stage.insert(new Q.ownReserveCard());
     Q.OppReserveCard  = stage.insert(new Q.oppReserveCard());
     // Q.Scene           = stage.insert(new Q.scene());
-
 
   });
 
