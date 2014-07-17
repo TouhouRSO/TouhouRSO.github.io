@@ -14,6 +14,10 @@ window.addEventListener('load',function(e) {
   /* Card - Assets */
   .include("Card_CardBuilder")
   .include("Card_Name")
+  .include("Card_CharaParam")
+  .include("Card_EventParam")
+  .include("Card_SpellParam")
+  .include("Card_SupportParam")
 
   /* Layout */
   .include("Layout_ActiveCard")
