@@ -44,7 +44,7 @@ Quintus.Flow_PhaseManager = function(Q) {
     console.log("test");
     console.log(sampleDeck);
 
-    initGame(document.getElementById(sampleDeck));
+    initGame(sampleDeck);
   });
   
   function initGame(deck) {
