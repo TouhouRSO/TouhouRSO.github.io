@@ -1,6 +1,15 @@
-;Quintus.Flow_PhaseManager = function(Q) {
+;var sampleDeck = $.ajax({
+  url: "data/sampleDeck.txt",
+  async: false,
+  success: function (data){
+    $( "body" ).append(data);
+  }
+});
+
+Quintus.Flow_PhaseManager = function(Q) {
 
   Q.scene("startGame",function(stage) {  
+    /* Implement Objects */
 
     Q.state.reset({phase: " Replenishing Phase ", turn: 0})
 
@@ -32,7 +41,23 @@
     Q.OppReserveCard  = stage.insert(new Q.oppReserveCard());
     // Q.Scene           = stage.insert(new Q.scene());
 
+    console.log("test");
+    console.log(sampleDeck);
+
+    initGame(document.getElementById(sampleDeck));
   });
+  
+  function initGame(deck) {
+    console.log(deck);
+    var cards = parseText(deck);
+    console.log(cards);
+
+  }
+
+  function parseText(deck) {
+    return deck.split(", ");
+  }
+
 
 
 }
