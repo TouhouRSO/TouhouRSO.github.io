@@ -11,12 +11,10 @@
     		border: false,
       	setFont: "800 24px Arial"
       });
+      Q.state.on("change.phase",this,"phase");
     },
-
     phase: function(phase) {
-    	if (typeof a !== 'undefined')
 	      this.p.label = phase;
-	    return this.p.label;
     }
 	});
 
