@@ -6,17 +6,69 @@
 <title>Play</title>
 <!-- Built-in Script -->
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script src='lib/quintus/quintus.js'></script>
-<script src='lib/quintus/quintus_2d.js'></script>
-<script src='lib/quintus/quintus_anim.js'></script>
-<script src='lib/quintus/quintus_audio.js'></script>
-<script src='lib/quintus/quintus_input.js'></script>
-<script src='lib/quintus/quintus_scenes.js'></script>
-<script src='lib/quintus/quintus_sprites.js'></script>
-<script src='lib/quintus/quintus_touch.js'></script>
-<script src='lib/quintus/quintus_ui.js'></script>
+<script src='lib/quintus/quintus.js'              ></script>
+<script src='lib/quintus/quintus_2d.js'           ></script>
+<script src='lib/quintus/quintus_anim.js'         ></script>
+<script src='lib/quintus/quintus_audio.js'        ></script>
+<script src='lib/quintus/quintus_input.js'        ></script>
+<script src='lib/quintus/quintus_scenes.js'       ></script>
+<script src='lib/quintus/quintus_sprites.js'      ></script>
+<script src='lib/quintus/quintus_touch.js'        ></script>
+<script src='lib/quintus/quintus_ui.js'           ></script>
+
+<!-- Custom HTML-->
+<div id='loading'>
+	<div id='loading_container'>
+		Loading...
+		<div id='loading_progress'></div>
+	</div>
+</div>
+
+<!-- Custom CSS-->
+<link rel="stylesheet" type="text/css" href="style.css">
+
 <!-- Game Script -->
-<script src='main/RSO.js'></script>
+
+  <!-- Assets -->
+  <script src='main/Assets/imageList.js'          ></script>
+  <script src='main/Assets/audioList.js'          ></script>
+    <!-- Card Details -->
+    <script src='main/Assets/card/cardBuilder.js' ></script>
+    <script src='main/Assets/card/cardName.js'    ></script>
+    <script src='main/Assets/card/charaParam.js'  ></script>
+    <script src='main/Assets/card/spellParam.js'  ></script>
+    <script src='main/Assets/card/supportParam.js'></script>
+    <script src='main/Assets/card/eventParam.js'  ></script>
+
+
+  <!-- Game Layout -->
+  <script src="main/Layout/activeCard.js"         ></script>
+  <script src="main/Layout/deck.js"               ></script>
+  <script src="main/Layout/discardPile.js"        ></script>
+  <script src="main/Layout/infoCard.js"           ></script>
+  <script src="main/Layout/infoHP.js"             ></script>
+  <script src="main/Layout/infoSP.js"             ></script>
+  <script src="main/Layout/infoPhase.js"          ></script>
+  <script src="main/Layout/infoPlayer.js"         ></script>
+  <script src="main/Layout/handCard.js"           ></script>
+  <script src="main/Layout/leadCharacter.js"      ></script>
+  <script src="main/Layout/phaseEnd.js"           ></script>
+  <script src="main/Layout/otherCharacter.js"     ></script>
+  <script src="main/Layout/reserveCard.js"        ></script>
+  <script src="main/Layout/sceneCard.js"          ></script>
+
+  <!-- Main -->
+  <script src='main/RSO.js'                       ></script>
+
+    <!-- Game Flow -->
+    <script src='main/Flow/phaseManager.js'       ></script>
+    <script src='main/Flow/replenishingPhase.js'  ></script>
+    <script src='main/Flow/battlePhase.js'        ></script>
+    <script src='main/Flow/preparationPhase.js'   ></script>
+
+  <!-- Game Over -->
+  <script src='main/over.js'                      ></script>
+
 </head>
 <body></body>
 </html>
