@@ -9,6 +9,8 @@
 
 #loading_container {
   position:relative;
+  top: -55px;
+  left: -260px;
   margin:0 auto;
   width:50%;
   height:20px;
