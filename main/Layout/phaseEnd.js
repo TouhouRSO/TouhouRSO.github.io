@@ -12,12 +12,12 @@
       });
       this.on("click",function() {
         console.log(Q.Phase.p.label);
-        if (Q.Phase.p.label == " Replenishing Phase ") {
-          Q.Phase.p.label = " Battle Phase ";
-        } else if (Q.Phase.p.label == " Battle Phase ") {
-          Q.Phase.p.label = " Preparation Phase ";
+        if (Q.state.get("phase") == " Replenishing Phase ") {
+          Q.state.set("phase"," Battle Phase ");
+        } else if (Q.state.get("phase") == " Battle Phase ") {
+          Q.state.set("phase"," Preparation Phase ");
         } else {
-          Q.Phase.p.label = " Replenishing Phase ";
+          Q.state.set("phase"," Replenishing Phase ");
         }
       });
     }
