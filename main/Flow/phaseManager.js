@@ -10,38 +10,32 @@
 
 
     /* Init Layout */
-	  Q.Phase = stage.insert(new Q.infoPhase());
+    Q.OwnActiveCard   = stage.insert(new Q.ownActiveCard());
+    Q.OppActiveCard   = stage.insert(new Q.oppActiveCard());
+    Q.OwnDeck         = stage.insert(new Q.ownDeck());
+    Q.OppDeck         = stage.insert(new Q.oppDeck());
+    Q.OwnDiscard      = stage.insert(new Q.ownDiscard());
+    Q.OppDiscard      = stage.insert(new Q.oppDiscard());
+    // Q.OwnHand      = stage.insert(new Q.ownHand());
+    // Q.OppHand      = stage.insert(new Q.oppHand());
+    Q.Card            = stage.insert(new Q.infoCard());
+    // Q.OwnHP        = stage.insert(new Q.ownHP());
+    // Q.OppHP        = stage.insert(new Q.oppHP());
+    // Q.OwnSP        = stage.insert(new Q.ownSP());
+    // Q.OppSP        = stage.insert(new Q.oppSP());
+    Q.Phase           = stage.insert(new Q.infoPhase()); /* Name in connected to PhaseEnd.click() */
+    // Q.OwnPlayer    = stage.insert(new Q.ownPlayer());
+    // Q.OppPlayer    = stage.insert(new Q.oppPlayer());
+    Q.OwnLeadChar     = stage.insert(new Q.ownLeadChar());
+    Q.OppLeadChar     = stage.insert(new Q.oppLeadChar());
+    Q.PhaseEnd        = stage.insert(new Q.phaseEnd());
+    Q.OwnOtherChar    = stage.insert(new Q.ownOtherChar());
+    Q.OppOtherChar    = stage.insert(new Q.oppOtherChar());
+    Q.OwnReserveCard  = stage.insert(new Q.ownReserveCard());
+    Q.OppReserveCard  = stage.insert(new Q.oppReserveCard());
+    // Q.Scene           = stage.insert(new Q.scene());
 
 
-
-    /* End Phase Box */
-    var endPhaseBox = stage.insert(new Q.UI.Container({
-      fill: "gray",
-      border: 5,
-      x: 1440, // 1920 * 0.75
-      y: 649, // 1080 / 2 + 72 (height) * 1.5
-      hidden: false
-    }));
-    
-    /* End Phase Button */
-    var endPhaseButton = endPhaseBox.insert(new Q.UI.Button({ 
-      label: " End Phase ", 
-      fontColor: "white",
-      font: "800 24px Arial", 
-      x: 0, 
-      y: 0, 
-    }))
-    endPhaseButton.on("click",function() {
-    	console.log(Q.Phase.p.label);
-      if (Q.Phase.p.label == " Replenishing Phase ") {
-      	Q.Phase.p.label = " Battle Phase ";
-      } else if (Q.Phase.p.label == " Battle Phase ") {
-      	Q.Phase.p.label = " Preparation Phase ";
-      } else {
-      	Q.Phase.p.label = " Replenishing Phase ";
-      }
-    });
-    endPhaseBox.fit(12, 12);
   });
 
 
