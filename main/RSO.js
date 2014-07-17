@@ -18,8 +18,8 @@ window.addEventListener('load',function(e) {
     width:   1920,
     height:  1080,
     scaleToFit: true,
-    upsampleWidth:  1024,  // Double the pixel density of the 
-    upsampleHeight: 768    // game if the w or h is 420x320
+    upsampleWidth:  1024,  // Double the pixel density if 1024 x 768 or less
+    upsampleHeight: 768 
   }).controls().touch();
   
   /* Load All Assets, then start the game */
