@@ -4,10 +4,34 @@ window.addEventListener('load',function(e) {
   var Q = window.Q = Quintus({
     //imagePath: "file:///C:/Rumbling%20Spell%20Orchestra/"
   })
+  /* Standard lib */
   .include("Sprites, UI, Scenes, Input, Touch")
-  .include("Assets_ImageList, Assets_AudioList") 
-  .include("Card_CardBuilder, Card_Name")
+
+  /* Assets */
+  .include("Assets_ImageList") 
+  .include("Assets_AudioList") 
+
+  /* Card - Assets */
+  .include("Card_CardBuilder")
+  .include("Card_Name")
+
+  /* Layout */
+  .include("Layout_ActiveCard")
+  .include("Layout_Deck")
+  .include("Layout_DiscardPile")
+  .include("Layout_HandCard")
+  .include("Layout_InfoCard")
+  .include("Layout_InfoHP")
+  .include("Layout_InfoSP")
   .include("Layout_InfoPhase")
+  .include("Layout_InfoPlayer")
+  .include("Layout_LeadCharacter")
+  .include("Layout_PhaseEnd")
+  .include("Layout_ReserveCard")
+  .include("Layout_OtherCharacter")
+  .include("Layout_SceneCard")
+
+  /* Flow */
   .include("Flow_PhaseManager");
 
   /* Set Up The Canvas */
