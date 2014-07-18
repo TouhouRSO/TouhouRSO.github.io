@@ -1,5 +1,6 @@
 ;
-var sampleDeck = $('#sampleDeck').load('data/sampleDeck.txt')[0].style.display="none";
+var sampleDeck = $('#sampleDeck').load('data/sampleDeck.txt')[0];
+sampleDeck.style.display="none";
 
 Quintus.Flow_PhaseManager = function(Q) {
 
