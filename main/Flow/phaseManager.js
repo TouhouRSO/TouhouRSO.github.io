@@ -37,14 +37,17 @@ Quintus.Flow_PhaseManager = function(Q) {
     Q.OppReserveCard  = stage.insert(new Q.oppReserveCard());
     // Q.Scene           = stage.insert(new Q.scene());
 
-    console.log("test");
-    console.log(sampleDeck.innerHTML);
-
     initGame(sampleDeck.innerHTML);
   });
   
   function initGame(deck) {
     var cards = parseText(deck);
+
+    var count = {"Character":0, "Spell":0, "Support":0, "Event":0};
+    console.log(count);
+    for (var card : cards) { count[Q.cardType[card]]++; }
+    console.log(count);
+
 
   }
 
