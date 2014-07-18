@@ -1,5 +1,5 @@
 ;
-var sampleDeck = $('#sampleDeck').load('data/sampleDeck.txt')[0].innerHTML;
+var sampleDeck = $('#sampleDeck').load('data/sampleDeck.txt')[0].style.display="none";
 
 Quintus.Flow_PhaseManager = function(Q) {
 
@@ -37,9 +37,9 @@ Quintus.Flow_PhaseManager = function(Q) {
     // Q.Scene           = stage.insert(new Q.scene());
 
     console.log("test");
-    console.log(sampleDeck);
+    console.log(sampleDeck.innerHTML);
 
-    initGame(sampleDeck);
+    initGame(sampleDeck.innerHTML);
   });
   
   function initGame(deck) {
