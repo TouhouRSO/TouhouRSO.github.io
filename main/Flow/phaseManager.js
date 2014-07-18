@@ -42,9 +42,9 @@ Quintus.Flow_PhaseManager = function(Q) {
     // Q.Scene           = stage.insert(new Q.scene());
 
     console.log("test");
-    console.log(sampleDeck);
+    console.log(sampleDeck.text);
 
-    initGame(sampleDeck);
+    initGame(sampleDeck.text);
   });
   
   function initGame(deck) {
