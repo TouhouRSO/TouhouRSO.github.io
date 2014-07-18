@@ -1,7 +1,9 @@
-;var sampleDeck = $(document).ready(function() {
+;
+var sampleDeck;
+$(document).ready(function() {
   $.get("data/sampleDeck.txt", 
     function(data) {
-      $( "sampleDeck" ).text(data)
+      sampleDeck = $( "sampleDeck" ).text(data)
     }
   );
 });   
