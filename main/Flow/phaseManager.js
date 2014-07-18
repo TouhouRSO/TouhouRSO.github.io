@@ -47,7 +47,7 @@ Quintus.Flow_PhaseManager = function(Q) {
 
     var count = {"Character":0, "Spell":0, "Support":0, "Event":0};
     console.log(count);
-    for (var i = 0; i < 43; i++) { count[Q.cardType[ids[i]]]++; }
+    for (var i = 0; i <= 43; i++) { count[Q.cardType[ids[i]]]++; }
     console.log(count);
 
 
