@@ -54,7 +54,7 @@ Quintus.Flow_PhaseManager = function(Q) {
   }
 
   function parseText(deck) {
-    return deck.split(", ");
+    return deck.slice(0, -1).split(", "); // slice to take out extra '\n' from github
   }
 
 
