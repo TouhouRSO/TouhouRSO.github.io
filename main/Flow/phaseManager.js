@@ -41,11 +41,13 @@ Quintus.Flow_PhaseManager = function(Q) {
   });
   
   function initGame(deck) {
-    var cards = parseText(deck);
+
+    var id;
+    var ids = parseText(deck);
 
     var count = {"Character":0, "Spell":0, "Support":0, "Event":0};
     console.log(count);
-    for (var card : cards) { count[Q.cardType[card]]++; }
+    for (id in ids) { count[Q.cardType[id]]++; }
     console.log(count);
 
 
