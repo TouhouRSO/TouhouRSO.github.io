@@ -42,13 +42,11 @@ Quintus.Flow_PhaseManager = function(Q) {
   
   function initGame(deck) {
 
-    var id;
+    Q.Error = [];
     var ids = parseText(deck);
+    // deckCheck(ids); -> should be done before launching game
+    setDeck(ids);
 
-    var count = {"Character":0, "Spell":0, "Support":0, "Event":0};
-    console.log(count);
-    for (var i = 0; i <= 43; i++) { count[Q.cardType[ids[i]]]++; }
-    console.log(count);
 
 
   }
@@ -56,7 +54,52 @@ Quintus.Flow_PhaseManager = function(Q) {
   function parseText(deck) {
     return deck.slice(0, -1).split(", "); // slice to take out extra '\n' from github
   }
+  function setDeck(ids) { // Optimization pending
+    for (var i; i <= 43; i++)
+        Q.ownDeck.add(ids[i], i);
+  }
+
 
 
 
 }
+
+/* Saved for future reference
+  function deckCheck(ids) {
+
+    
+    //  Checked By Default:
+    //  4 Characters
+    //  1 Spell at least
+    //  Max 3 copies for spell, support, event
+    //  40 Non-characters
+    
+    var count = {"Spell":0, "Support":0, "Event":0};
+
+    setOwnChara();
+
+    for (var i = 0; i <= 43; i++) { count[Q.cardType[ids[i]]]++; }
+    if (count["Character"] != 4) {
+
+    }
+
+  }
+
+  function setOwnChara() {
+    Q.ownChara    = {};
+    Q.ownCharaIDs = [];
+    for (var i = 0; i <= 43; i++) { 
+      if (Q.cardType[ids[i]] == "Character") {
+        Q.ownChara[Q.cardName[ids[i]]] = Q.ownChara[Q.cardName[ids[i]]] + 1 || 1;
+        Q.ownCharaIDs.push(ids.splice(i, 1)[0]); // separate chara id from id list
+        if (TotalChara(Q.ownChara) == 4) break;
+      }
+    }
+  }
+
+  function totalChara(h) {
+    var sum = 0;
+    for (k in h) sum += h[k];
+    return sum;
+  }
+*/

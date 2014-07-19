@@ -8,8 +8,12 @@
       w: 104,
       h: 150,
       border: false,
-      hidden: false
+      hidden: false,
+      cards: []
       });
+    },
+    add: function(id, i) {
+      cards.push(Q.initCard(id, i));
     }
 	});
   Q.UI.Container.extend("oppDeck",{
