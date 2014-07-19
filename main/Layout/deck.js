@@ -13,7 +13,7 @@
       });
     },
     add: function(id, i) {
-      cards.push(Q.initCard(id, i));
+      this.p.cards.push(Q.initCard(id, i));
     }
 	});
   Q.UI.Container.extend("oppDeck",{
