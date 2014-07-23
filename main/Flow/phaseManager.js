@@ -56,7 +56,7 @@ Quintus.Flow_PhaseManager = function(Q) {
   }
   function setDeck(ids) { // Optimization pending
     for (var i; i <= 43; i++)
-        Q.ownDeck.add(ids[i], i);
+        Q.OwnDeck.add(ids[i], i);
   }
 
 
