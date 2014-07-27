@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    
+    /* Intro Stuff */
+    $('#inputArea').html("add text here");
+    
+    
     /* Input Button onclick */
     $("#input").click(function() {
         $("#inputArea").select();
