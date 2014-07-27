@@ -11,26 +11,22 @@ body {
 }
 
 #input {
-    margin-left: 150px;
     height:100px;
     width:1000px;
     background-image:url(convert/images/MarisaLabel.png);
     background-repeat:no-repeat;
 }
 #inputArea {
-    margin-left: 225px;
     width:800px;
     height:200px;
 }
 #output {
-    margin-left: 150px;
     height:100px;
     width:1000px;
     background-image:url(convert/images/AliceLabel.png);
     background-repeat:no-repeat;
 }
 #outputArea {
-    margin-left: 225px;
     width:800px;
     height:200px;
 }
