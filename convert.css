@@ -3,7 +3,11 @@ html {
 }
 body {
     height:100%;
-    background-image:#fff3dd url("convert/images/converBG.jpg") no-repeat center;
+    background-image:url(convert/images/converBG.jpg);
+    background-color: #fff3dd;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center; 
 }
 
 #input::before {
