@@ -10,18 +10,28 @@ body {
     background-position:center; 
 }
 
-#input::before {
-    content:"Input";
+#input {
+    margin-left: 150px;
+    height:100px;
+    width:1000px;
+    background-image:url(convert/images/MarisaLabel.png);
+    background-repeat:no-repeat;
 }
 #inputArea {
-    width:500px;
+    margin-left: 225px;
+    width:800px;
     height:200px;
 }
-#output::before {
-    content:"Output";
+#output {
+    margin-left: 150px;
+    height:100px;
+    width:1000px;
+    background-image:url(convert/images/AliceLabel.png);
+    background-repeat:no-repeat;
 }
 #outputArea {
-    width:500px;
+    margin-left: 225px;
+    width:800px;
     height:200px;
 }
 #convert {
