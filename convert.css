@@ -47,7 +47,7 @@ body {
     position: relative;
     
     background-image: url(convert/images/FlandreButton.png);
-    background-color: #fff3dd;
+    background-color: transparent;
     background-repeat:no-repeat;
 }
 #symbols {
@@ -59,7 +59,7 @@ body {
     position: relative;
     
     background-image: url(convert/images/NitoriButton.png);
-    background-color: #fff3dd;
+    background-color: transparent;
     background-repeat:no-repeat;
 }
 #convert {
@@ -71,6 +71,6 @@ body {
     position: relative;
     
     background-image: url(convert/images/PatchouliButton.png);
-    background-color: #fff3dd;
+    background-color: transparent;
     background-repeat:no-repeat;
 }
