@@ -73,8 +73,6 @@ $(document).ready(function() {
             /* Display Result */
             $('#outputArea').html(result);
         }
-        /* Play Patchouli */
-        $('#audio001').play();
     });
     !function frame() {
         $('#convert').click()
