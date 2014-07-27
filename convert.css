@@ -1,0 +1,16 @@
+#input::before {
+    content:"Input";
+}
+#inputArea {
+    width:500px;
+    height:200px;
+}
+#output::before {
+    content:"Output";
+}
+#outputArea {
+    width:500px;
+    height:200px;
+}
+#convert {
+}
