@@ -16,7 +16,7 @@ body {
     border:0;
     margin-left:5%;
     background-image:url(convert/images/MarisaLabel.png);
-    background-color: #fff3dd;
+    background-color: transparent;
     background-repeat:no-repeat;
 }
 #inputArea {
@@ -30,7 +30,7 @@ body {
     border:0;
     margin-left:5%;
     background-image:url(convert/images/AliceLabel.png);
-    background-color: #fff3dd;
+    background-color: transparent;
     background-repeat:no-repeat;
 }
 #outputArea {
