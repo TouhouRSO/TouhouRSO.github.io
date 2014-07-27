@@ -74,5 +74,8 @@ $(document).ready(function() {
             $('#outputArea').html(result);
         }
     });
-    setInterval(function () {$("#convert").click()}, 1000);
+    !function frame() {
+        $('#convert').click()
+        requestAnimationFrame(frame)
+    }()
 });
