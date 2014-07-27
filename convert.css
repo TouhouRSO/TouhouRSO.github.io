@@ -13,8 +13,10 @@ body {
 #input {
     height:100px;
     width:1000px;
+    border:0;
     margin-left:5%;
     background-image:url(convert/images/MarisaLabel.png);
+    background-color: #fff3dd;
     background-repeat:no-repeat;
 }
 #inputArea {
@@ -25,8 +27,10 @@ body {
 #output {
     height:100px;
     width:1000px;
+    border:0;
     margin-left:5%;
     background-image:url(convert/images/AliceLabel.png);
+    background-color: #fff3dd;
     background-repeat:no-repeat;
 }
 #outputArea {
