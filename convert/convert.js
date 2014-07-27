@@ -1,12 +1,23 @@
 $(document).ready(function() {
+    /* Input Button onclick */
+    $("#input").click(function() {
+        $("#inputArea").select();
+    });
+    /* Output Button onclick */
+    $("#output").click(function() {
+        $("#outputArea").select();
+    });
+    /* Comment Button onclick */
     $("#comment").click(function() {
         window.button = "comment";
         $("#convert").click();
     });
+    /* Symbols Button onclick */
     $("#symbols").click(function() {
         window.button = "symbols";
         $("#convert").click();
     });
+    /* Convert Button onclick */
     $("#convert").click(function() {
         if (window.button == "comment" || window.button == null) {
             var maxLength = 0;
