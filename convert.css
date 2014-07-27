@@ -4,6 +4,7 @@ html {
 }
 body {
     height:100%;
+    
     background-image:url(convert/images/converBG.jpg);
     background-color: #fff3dd;
     background-repeat:no-repeat;
@@ -16,6 +17,7 @@ body {
     width:1000px;
     border:0;
     margin-left:5%;
+    
     background-image:url(convert/images/MarisaLabel.png);
     background-color: transparent;
     background-repeat:no-repeat;
@@ -24,12 +26,15 @@ body {
     width:800px;
     height:200px;
     margin-left:10%;
+    
+    background-color: transparent;
 }
 #output {
     height:100px;
     width:1000px;
     border:0;
     margin-left:5%;
+    
     background-image:url(convert/images/AliceLabel.png);
     background-color: transparent;
     background-repeat:no-repeat;
@@ -38,6 +43,8 @@ body {
     width:800px;
     height:200px;
     margin-left:10%;
+    
+    background-color: transparent;
 }
 #comment {
     width:213px;
