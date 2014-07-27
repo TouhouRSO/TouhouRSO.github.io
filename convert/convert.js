@@ -16,7 +16,6 @@ $(document).ready(function() {
                 maxLength = maxLength < textArray[i].length ? textArray[i].length : maxLength;
             
             /* Begin Conversion */
-            
                 /* First Line */
                 result = result.concat("/**");
                 for (var i = 0; i < maxLength; i++) result = result.concat("*");
@@ -52,7 +51,11 @@ $(document).ready(function() {
                 for (var i = 0; i < textArray.length; i++) {
                     for (var j = 0; j < textArray[i].length; j++)
                         switch (textArray[i][j]) {
-                            case '\\','\;','\"':
+                            case '\\':
+                            case '\"':
+                            case '\;':
+                            case '"' :
+                            case '\'':
                                 result = result.concat("\\").concat(textArray[i][j]);
                                 break;
                             default:
