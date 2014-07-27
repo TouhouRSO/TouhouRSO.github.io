@@ -12,6 +12,16 @@ body {
     background-position:right bottom; 
 }
 
+#title {
+    width:658px;
+    height:100px;
+    border:0;
+    position: relative;
+    
+    background-image: url(convert/images/SakuyaButton.png);
+    background-color: transparent;
+    background-repeat:no-repeat;
+}
 #input {
     height:100px;
     width:1000px;
