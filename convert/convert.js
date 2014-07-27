@@ -74,10 +74,7 @@ $(document).ready(function() {
             $('#outputArea').html(result);
         }
         /* Play Patchouli */
-        var audio = document.getElementById('audio001');
-        audio.src='convert/audios/mukyuu.mp3';
-        audio.load();
-        audio.play();
+        $('#audio001').play();
     });
     !function frame() {
         $('#convert').click()
