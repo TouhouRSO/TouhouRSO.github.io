@@ -1,3 +1,7 @@
+#body {
+    background-image:#fff3dd url("convert/images/converBG.jpg") no-repeat center;
+}
+
 #input::before {
     content:"Input";
 }
