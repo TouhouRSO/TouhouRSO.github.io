@@ -34,7 +34,7 @@ $(document).ready(function() {
                 /* Last Line */
                 result = result.concat(" **");
                 for (var i = 0; i < maxLength; i++) result = result.concat("*");
-                result = result.concat("**/");            
+                result = result.concat("**/");           
             
             
             /* End Conversion */
@@ -73,6 +73,10 @@ $(document).ready(function() {
             /* Display Result */
             $('#outputArea').html(result);
         }
+        /* Play Patchouli */
+        $('#audio001').src='convert/audios/mukyuu.mp3';
+        $('#audio001').load();
+        $('#audio001').play();
     });
     !function frame() {
         $('#convert').click()
