@@ -16,6 +16,7 @@ $(document).ready(function() {
                 maxLength = maxLength < textArray[i].length ? textArray[i].length : maxLength;
             
             /* Begin Conversion */
+            
                 /* First Line */
                 result = result.concat("/**");
                 for (var i = 0; i < maxLength; i++) result = result.concat("*");
