@@ -32,7 +32,16 @@ body {
     background-color: transparent;
     background-repeat:no-repeat;
 }
-#inputArea {
+#inputAreaA {
+    width:800px;
+    height:15px;
+    margin-left:10%;
+    margin-bottom:0.5%;
+    overflow: hidden; /* Annoying Scroll */
+    
+    background-color: transparent;
+}
+#inputAreaB {
     width:800px;
     height:200px;
     margin-left:10%;
