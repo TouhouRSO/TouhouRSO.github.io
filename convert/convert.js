@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
     /* Convert Button onclick */
     $("#convert").click(function() {
-        if (window.button == "comment" || window.button == null) {
+        if (window.button == "comment") {
             var maxLength = 0;
             var template = $('#inputAreaA').val().indexOf("[text]");
             var result = "";
@@ -67,7 +67,7 @@ $(document).ready(function() {
             
             /* Display Result */
             $('#outputArea').html(result);
-        } else if (window.button == "symbols") {
+        } else if (window.button == "symbols" || window.button == null) {
             var template = $('#inputAreaA').val().indexOf("[text]");
             var result = "";
             var textA = $('#inputAreaA').val();
