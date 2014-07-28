@@ -7,10 +7,13 @@ $(document).ready(function() {
     
     /* Input Button onclick */
     $("#input").click(function() {
-        if ($("#inputAreaA")[0].selectionStart == $("#inputAreaA")[0].selectionEnd)
-          $("#inputAreaA").select();
-        else
-          $("#inputAreaB").select();
+        if (window.inputArea == 'A' || window.inputArea == null) {
+            window.inputArea = 'A';
+            $("#inputAreaA").select();
+        } else {
+            window.inputArea = 'B';
+            $("#inputAreaB").select();
+        }
     });
     /* Output Button onclick */
     $("#output").click(function() {
