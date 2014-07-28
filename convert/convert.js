@@ -7,7 +7,7 @@ $(document).ready(function() {
     
     /* Input Button onclick */
     $("#input").click(function() {
-        if ($("#inputAreaA").selectionStart == $("#inputAreaA").selectionEnd)
+        if ($("#inputAreaA")[0].selectionStart[0] == $("#inputAreaA").selectionEnd)
           $("#inputAreaA").select();
         else
           $("#inputAreaB").select();
