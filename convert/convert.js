@@ -30,7 +30,7 @@ $(document).ready(function() {
     $("#convert").click(function() {
         if (window.button == "comment" || window.button == null) {
             var maxLength = 0;
-            var template = $('#inputAreaB').val().indexOf("[text]");
+            var template = $('#inputAreaA').val().indexOf("[text]");
             var result = "";
             var textA = $('#inputAreaA').val();
             var textB = $('#inputAreaB').val();
@@ -42,7 +42,7 @@ $(document).ready(function() {
             /* Begin Conversion */
                 /* First Line */
                 if (template != -1)
-                  result = result.concat(textA.substring(0, template));
+                    result = result.concat(textA.substring(0, template));
                 result = result.concat("/**");
                 for (var i = 0; i < maxLength; i++) result = result.concat("*");
                 result = result.concat("**\n");
@@ -60,7 +60,7 @@ $(document).ready(function() {
                 for (var i = 0; i < maxLength; i++) result = result.concat("*");
                 result = result.concat("**/");
                 if (template != -1)
-                  result = result.concat(textA.substring(template + 6, textA.length));
+                    result = result.concat(textA.substring(template + 6, textA.length));
             
             
             /* End Conversion */
@@ -68,12 +68,15 @@ $(document).ready(function() {
             /* Display Result */
             $('#outputArea').html(result);
         } else if (window.button == "symbols") {
+            var template = $('#inputAreaA').val().indexOf("[text]");
             var result = "";
-            var text = $('#inputArea').val();
-            var textArray = text.split("\n");
+            var textA = $('#inputAreaA').val();
+            var textB = $('#inputAreaB').val();
+            var textArray = textB.split("\n");
             
             /* Begin Conversion */
-            
+                if (template != -1)
+                    result = result.concat(textA.substring(0, template));
                 result = result.concat('"');
                 /* Primitive Interator Just To Be Save */
                 for (var i = 0; i < textArray.length; i++) {
@@ -93,6 +96,8 @@ $(document).ready(function() {
                     result = result.concat("\\n");
                 }
                 result = result.concat('"');
+                if (template != -1)
+                    result = result.concat(textA.substring(template + 6, textA.length));
             
             /* End Conversion */
             
