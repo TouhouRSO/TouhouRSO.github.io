@@ -7,7 +7,7 @@ $(document).ready(function() {
     
     /* Input Button onclick */
     $("#input").click(function() {
-        if (window.inputArea == 'A' || window.inputArea == null) {
+        if (window.inputArea == 'B' || window.inputArea == null) {
             window.inputArea = 'A';
             $("#inputAreaA").select();
         } else {
