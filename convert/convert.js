@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     /* Intro Stuff */
-    $('#inputAreaB').html("Template=[text]");
+    $('#inputAreaA').html("Template=[text]");
     $('#inputAreaB').html("add text here");
     
     
