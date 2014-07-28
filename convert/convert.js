@@ -33,7 +33,7 @@ $(document).ready(function() {
     $("#convert").click(function() {
         
         if ($('#inputAreaA').val().indexOf("[text]") == -1)
-          $('#inputAreaA').html("[text]"); /* force text to always be there :) */
+          $('#inputAreaA').val("[text]"); /* force text to always be there :) */
         
         
         if (window.button == "comment") {
