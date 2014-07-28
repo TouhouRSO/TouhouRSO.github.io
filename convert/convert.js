@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     /* Intro Stuff */
-    $('#inputAreaA').html("Template=[text]");
+    $('#inputAreaA').html("$(\"#dulst-customCSS\")[0].innerHTML=[text]");
     $('#inputAreaB').html("add text here");
     
     
