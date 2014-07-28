@@ -1,12 +1,16 @@
 $(document).ready(function() {
     
     /* Intro Stuff */
-    $('#inputArea').html("add text here");
+    $('#inputAreaB').html("Template=[text]");
+    $('#inputAreaB').html("add text here");
     
     
     /* Input Button onclick */
     $("#input").click(function() {
-        $("#inputArea").select();
+        if ($("#inputAreaA").selectionStart == $("#inputAreaA").selectionEnd)
+          $("#inputAreaA").select();
+        else
+          $("#inputAreaB").select();
     });
     /* Output Button onclick */
     $("#output").click(function() {
@@ -26,15 +30,19 @@ $(document).ready(function() {
     $("#convert").click(function() {
         if (window.button == "comment" || window.button == null) {
             var maxLength = 0;
+            var template = $('#inputAreaB').val().indexOf("[text]");
             var result = "";
-            var text = $('#inputArea').val();
-            var textArray = text.split("\n");
+            var textA = $('#inputAreaA').val();
+            var textB = $('#inputAreaB').val();
+            var textArray = textB.split("\n");
             /* Primitive Interator Just To Be Save */
             for (var i = 0; i < textArray.length; i++)
                 maxLength = maxLength < textArray[i].length ? textArray[i].length : maxLength;
             
             /* Begin Conversion */
                 /* First Line */
+                if (template != -1)
+                  result = result.concat(textA.substring(0, template));
                 result = result.concat("/**");
                 for (var i = 0; i < maxLength; i++) result = result.concat("*");
                 result = result.concat("**\n");
@@ -50,7 +58,9 @@ $(document).ready(function() {
                 /* Last Line */
                 result = result.concat(" **");
                 for (var i = 0; i < maxLength; i++) result = result.concat("*");
-                result = result.concat("**/");           
+                result = result.concat("**/");
+                if (template != -1)
+                  result = result.concat(textA.substring(template + 6, textA.length));
             
             
             /* End Conversion */
