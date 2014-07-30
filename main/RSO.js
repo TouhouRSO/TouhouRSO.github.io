@@ -3,8 +3,8 @@ window.addEventListener('load',function(e) {
   /* Load All Libraries */
   var Q = window.Q = Quintus({
 
-    dataPath:  "file:///C:/Users/mini/Documents/GitHub/TouhouRSO.github.io/data/",
-    imagePath: "file:///C:/Rumbling%20Spell%20Orchestra/"
+    // dataPath:  "file:///C:/Users/mini/Documents/GitHub/TouhouRSO.github.io/data/",
+    imagePath: "C:/Rumbling%20Spell%20Orchestra/"
   })
   /* Standard lib */
   .include("Sprites, UI, Scenes, Input, Touch")
