@@ -4,7 +4,7 @@ window.addEventListener('load',function(e) {
   var Q = window.Q = Quintus({
 
     // dataPath:  "file:///C:/Users/mini/Documents/GitHub/TouhouRSO.github.io/data/",
-    imagePath: "file:///C:/Rumbling Spell Orchestra/"
+    // imagePath: "file:///C:/Rumbling Spell Orchestra/"
   })
   /* Standard lib */
   .include("Sprites, UI, Scenes, Input, Touch")
@@ -55,11 +55,11 @@ window.addEventListener('load',function(e) {
   }).controls().touch();
   
   /* Load All Assets, then start the game */
-  Q.preload(Q.imageList);
-  Q.preload(Q.audioList);
+  //Q.preload(Q.imageList);
+  //Q.preload(Q.audioList);
 
-  //Q.preload("Hinafuda_-_Card_Back_small.jpg");
-  //Q.preload("sampleDeck.txt");
+  Q.preload("Hinafuda_-_Card_Back_small.jpg");
+  Q.preload("sampleDeck.txt");
   Q.preload(function() {
     Q.stageScene("startGame");
   }, {
