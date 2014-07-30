@@ -1,11 +1,7 @@
 window.addEventListener('load',function(e) {
 
   /* Load All Libraries */
-  var Q = window.Q = Quintus({
-
-    dataPath:  "file:///C:/Rumbling Spell Orchestra/",
-    imagePath: "file:///C:/Rumbling Spell Orchestra/"
-  })
+  var Q = window.Q = Quintus({})
   /* Standard lib */
   .include("Sprites, UI, Scenes, Input, Touch")
 
@@ -58,8 +54,6 @@ window.addEventListener('load',function(e) {
   Q.preload(Q.imageList);
   Q.preload(Q.audioList);
 
-  //Q.preload("Hinafuda_-_Card_Back_small.jpg");
-  //Q.preload("sampleDeck.txt");
   Q.preload(function() {
     Q.stageScene("startGame");
   }, {
