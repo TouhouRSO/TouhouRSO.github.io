@@ -4,7 +4,7 @@ window.addEventListener('load',function(e) {
   var Q = window.Q = Quintus({
 
     // dataPath:  "file:///C:/Users/mini/Documents/GitHub/TouhouRSO.github.io/data/",
-    imagePath: "file:///C:/Rumbling Spell Orchestra/"
+    imagePath: "file://C:/Rumbling Spell Orchestra/"
   })
   /* Standard lib */
   .include("Sprites, UI, Scenes, Input, Touch")
