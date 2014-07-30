@@ -60,6 +60,7 @@ window.addEventListener('load',function(e) {
 
   //Q.preload("Hinafuda_-_Card_Back_small.jpg");
   //Q.preload("sampleDeck.txt");
+  Q.preload("test.jpg");
   Q.preload(function() {
     Q.stageScene("startGame");
   }, {
