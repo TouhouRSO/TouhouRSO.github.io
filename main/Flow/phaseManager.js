@@ -55,8 +55,8 @@ Quintus.Flow_PhaseManager = function(Q) {
     return deck.slice(0, -1).split(", "); // slice to take out extra '\n' from github
   }
   function setDeck(ids) { // Optimization pending
-    for (var i; i <= 43; i++)
-        Q.OwnDeck.add(ids[i], i);
+    for (var i = 0; i <= 43; i++)
+      Q.OwnDeck.add(ids[i], i);
   }
 
 
