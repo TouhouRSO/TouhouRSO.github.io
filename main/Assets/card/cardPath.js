@@ -1,6 +1,8 @@
 ;Quintus.Card_Path = function(Q) {
 	Q.cardPath = {};
 
+	Q.cardPath["back"]    = "back.jpg";
+
 	Q.cardPath["0600"]    = "Alice/Alice";
 	Q.cardPath["0600A"]   = "Alice/Alice";
 	Q.cardPath["0601"]    = "Alice/Alice";

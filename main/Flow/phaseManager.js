@@ -1,6 +1,6 @@
 ;
-var sampleDeck = $('#sampleDeck').load('data/sampleDeck.txt')[0];
-sampleDeck.style.display="none";
+window.sampleDeck = $('#sampleDeck').load('data/sampleDeck.txt')[0];
+window.sampleDeck.style.display="none";
 
 Quintus.Flow_PhaseManager = function(Q) {
 
@@ -37,31 +37,48 @@ Quintus.Flow_PhaseManager = function(Q) {
     Q.OppReserveCard  = stage.insert(new Q.oppReserveCard());
     // Q.Scene           = stage.insert(new Q.scene());
 
-    initGame(sampleDeck.innerHTML);
+    initGame();
   });
   
-  function initGame(deck) {
+  function initGame() {
 
     Q.Error = [];
-    var ids = parseText(deck);
-    // deckCheck(ids); -> should be done before launching game
-    setDeck(ids);
-
-
-
+    // deckCheck(parseText(window.sampleDeck.innerHTML)); -> should be done before launching game
+    setOwnDeck(parseText(window.sampleDeck.innerHTML));
+    setOppDeck();
+    setOwnLeader();
+    setOppLeader();
+    setOwnHand();
+    setOppHand();
   }
 
   function parseText(deck) {
     return deck.slice(0, -1).split(", "); // slice to take out extra '\n' from github
   }
-  function setDeck(ids) { // Optimization pending
+  function setOwnDeck(ids) { // Optimization pending
     for (var i = 0; i <= 43; i++)
       Q.OwnDeck.add(ids[i], i);
+
+    Q.stage(Q.activeStage).insert(convertToBack(Q.OwnDeck.p.cards[0], Q.OwnDeck.p.x, Q.OwnDeck.p.y));
   }
-
-
-
-
+  function setOppDeck() {
+  }
+  function setOwnLeader() {
+  }
+  function setOppLeader() {
+  }
+  function setOwnHand() {
+  }
+  function setOppHand() {
+  }
+  function convertToBack(card, dx, dy) {
+    card.p.asset = Q.cardPath["back"];
+    card.p.w = 104;
+    card.p.h = 150;
+    card.p.x = dx;
+    card.p.y = dy;
+    return card;
+  }
 }
 
 /* Saved for future reference

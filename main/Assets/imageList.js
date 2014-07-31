@@ -50,7 +50,7 @@
   "Alice/Alice0619.jpg",
   "Alice/Alice0620.jpg",
   "Alice/Alice0621.jpg",
-
+/*
   // Aya Package
   "Aya/Aya2400.jpg",
   "Aya/Aya2401.jpg",
@@ -1223,7 +1223,7 @@
 	"Yuyuko/Yuyuko0819.jpg",
 	"Yuyuko/Yuyuko0820.jpg",
 	"Yuyuko/Yuyuko0821.jpg"
-
+*/
   ];
 
 }
