@@ -2,7 +2,7 @@
 
 	Q.Sprite.extend("Card", {
 		init: function(p) {
-			this._super(p, { asset: p.path, scale:0.5, w: 104, h: 150 cx:104, cy:104});
+			this._super(p, { asset: p.path, scale:0.5, w: 104, h: 150, cx:104, cy:104});
 			this.on("drag");
 			this.on("touchEnd");
 			this.p.name = Q.cardName[p.id];
