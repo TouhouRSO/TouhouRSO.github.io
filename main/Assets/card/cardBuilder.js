@@ -68,7 +68,7 @@
 
 		}
 	});
-	Q.initCard = function(id, i) { // Optimization pending + var i is for testing
+	cardBuilder.initCard = function(id, i) { // Optimization pending + var i is for testing
 		if (Q.cardType[id] == "Character")
 			return new Q.Character({path:Q.cardPath[id] + id + ".jpg", id: id, x: i * 52, y:400});
 		else if (Q.cardType[id] == "Spell")
