@@ -21,6 +21,9 @@
 	 *******************/
 
   Q.imageList = [
+
+  // Back Card
+  "back.jpg",
   
   // Alice Package
 
