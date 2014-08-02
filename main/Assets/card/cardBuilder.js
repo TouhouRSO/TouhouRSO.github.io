@@ -6,6 +6,7 @@
 			this.on("drag");
 			this.on("touchEnd");
 			this.p.name = Q.cardName[p.id];
+			this.p.back = false;
 
 		},
 		drag: function(touch) {
@@ -70,18 +71,33 @@
 	});
 
 	Q.cardBuilder = {
-		initCard: function(id, i) { // Optimization pending + var i is for testing
-			if (Q.cardType[id] == "Character")
-				return new Q.Character({path:Q.cardPath[id] + id + ".jpg", id: id, x: i * 52, y:400});
-			else if (Q.cardType[id] == "Spell")
-				return new Q.Spell(    {path:Q.cardPath[id] + id + ".jpg", id: id, x: i * 52, y:400});
-			else if (Q.cardType[id] == "Support")
-				return new Q.Support(  {path:Q.cardPath[id] + id + ".jpg", id: id, x: i * 52, y:400});
-			else if (Q.cardType[id] == "Event")
-				return new Q.Event(    {path:Q.cardPath[id] + id + ".jpg", id: id, x: i * 52, y:400});
-			else
+		initCard: function(id, dx, dy) { // Optimization pending
+			switch (Q.cardType[id]) {
+				case "Character":
+				return new Q.Character({path:Q.cardPath[id] + id + ".jpg", id: id, x: dx, y:dy});
+				case "Spell":
+				return new Q.Spell(    {path:Q.cardPath[id] + id + ".jpg", id: id, x: dx, y:dy});
+				case "Support":
+				return new Q.Support(  {path:Q.cardPath[id] + id + ".jpg", id: id, x: dx, y:dy});
+				case "Event":
+				return new Q.Event(    {path:Q.cardPath[id] + id + ".jpg", id: id, x: dx, y:dy});
+				default:
 				console.log("Error: " + id + " is not registered");
-		}
+			}
+		},
+		front: function(card) {
+			card.p.asset = card.p.path;
+			card.p.back = false;
+			return card;
+		},
+		back: function(card) {
+	    card.p.asset = Q.cardPath["back"];
+	    card.p.back = true;
+	    return card;
+	  },
+	  flip: function(card) {
+	  	card.p.back ? front(card) : back(card);
+	  	return card;
+	  }
 	}
-
 }
