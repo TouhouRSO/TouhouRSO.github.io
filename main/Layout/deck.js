@@ -13,7 +13,37 @@
       });
     },
     add: function(id, i) {
-      this.p.cards.push(Q.cardBuilder.initCard(id, i));
+      this.p.cards.push(Q.cardBuilder.initCard(id, this.p.x, this.p.y));
+      Q.stage(Q.activeStage).insert(Q.cardBuilder.back(this.p.cards[i]);
+    },
+    shuffle: function() {
+      for(var i = this.p.cards.length, j, k; i;) {
+        j = Math.floor(Math.random() * i);
+        k = this.p.cards[--i];
+        this.p.cards[i] = this.p.cards[j];
+        this.p.cards[j] = k;
+      }
+    },
+    take: function(type) {
+      var result = [];
+      switch(type) {
+        case "Character":
+        case "Spell":
+        case "Support":
+        case "Event":
+        for (var i = 0; i < this.p.cards.length; i++)
+          if (this.p.cards[i].className == type) {
+            result.push(this.p.cards[i]);
+            this.p.cards.splice(i, 1);
+          }
+        default: // for card id
+        for (var i = 0; i < this.p.cards.length; i++)
+          if (this.p.cards[i].id == type) {
+            result.push(this.p.cards[i]);
+            this.p.cards.splice(i, 1);
+          }
+      }
+      return result;
     }
 	});
   Q.UI.Container.extend("oppDeck",{
