@@ -56,28 +56,26 @@ Quintus.Flow_PhaseManager = function(Q) {
     return deck.slice(0, -1).split(", "); // slice to take out extra '\n' from github
   }
   function setOwnDeck(ids) { // Optimization pending
-    for (var i = 0; i <= 43; i++)
+    for (var i = 0; i <= ids.length; i++)
       Q.OwnDeck.add(ids[i], i);
-
-    Q.stage(Q.activeStage).insert(convertToBack(Q.OwnDeck.p.cards[0], Q.OwnDeck.p.x, Q.OwnDeck.p.y));
+    /* pending websocket here */
   }
   function setOppDeck() {
+    /* websocket here */
   }
   function setOwnLeader() {
+
+    Q.OwnDeck.take("Character");
+    /* pending websocket here */
   }
   function setOppLeader() {
+    /* websocket here */
   }
   function setOwnHand() {
+    /* pending websocket here */
   }
   function setOppHand() {
-  }
-  function convertToBack(card, dx, dy) {
-    card.p.asset = Q.cardPath["back"];
-    card.p.w = 104;
-    card.p.h = 150;
-    card.p.x = dx;
-    card.p.y = dy;
-    return card;
+    /* websocket here */
   }
 }
 
