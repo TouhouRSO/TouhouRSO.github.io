@@ -10,6 +10,5 @@ touhouRSO.github.io
 
 
 # Dev. Note:
-
-https://github.com/tors/jquery-fileupload-rails
-https://github.com/twbs/bootstrap
+Schema
+https://repository.genmymodel.com/wmichaelv/RSOcardDB
