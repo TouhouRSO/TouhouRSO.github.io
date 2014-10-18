@@ -34,7 +34,7 @@ window.addEventListener('load',function(e) {
   .include("Layout_ReserveCard")
   .include("Layout_OtherCharacter")
   .include("Layout_SceneCard")
-  .include("Layout_SelectCard")
+  // .include("Layout_SelectCard")
 
   /* Flow */
   .include("Flow_PhaseManager");
