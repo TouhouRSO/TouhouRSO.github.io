@@ -92,7 +92,7 @@
 		},
 		back: function(card) {
 	    // card.p.asset = Q.cardPath["back"];
-	    card.p.back = true;
+	    // card.p.back = true;
 	    return card;
 	  },
 	  flip: function(card) {
