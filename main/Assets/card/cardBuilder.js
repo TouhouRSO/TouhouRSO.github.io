@@ -91,7 +91,7 @@
 			return card;
 		},
 		back: function(card) {
-	    card.p.asset = Q.cardPath["back"];
+	    // card.p.asset = Q.cardPath["back"];
 	    card.p.back = true;
 	    return card;
 	  },
