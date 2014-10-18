@@ -1,4 +1,5 @@
 ;Quintus.Layout_SelectCard = function(Q) {
+  /*
   Q.UI.Container.extend("selectCard",{
     init: function(cards) {
       this._super({
@@ -12,4 +13,5 @@
       });
     }
   });
+  */
 }
