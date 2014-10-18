@@ -14,7 +14,7 @@
     },
     add: function(id, i) {
       this.p.cards.push(Q.cardBuilder.initCard(id, this.p.x, this.p.y));
-      Q.stage(Q.activeStage).insert(Q.cardBuilder.back(this.p.cards[i]);
+      Q.stage(Q.activeStage).insert(Q.cardBuilder.back(this.p.cards[i]));
     },
     shuffle: function() {
       for(var i = this.p.cards.length, j, k; i;) {
