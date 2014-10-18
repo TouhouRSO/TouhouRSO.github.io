@@ -44,12 +44,14 @@ Quintus.Flow_PhaseManager = function(Q) {
 
     Q.Error = [];
     // deckCheck(parseText(window.sampleDeck.innerHTML)); -> should be done before launching game
+    /*
     setOwnDeck(parseText(window.sampleDeck.innerHTML));
     setOppDeck();
     setOwnLeader();
     setOppLeader();
     setOwnHand();
     setOppHand();
+    */
   }
 
   function parseText(deck) {
